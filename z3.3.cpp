@@ -20,6 +20,19 @@ int max(int arr[], int n) {
   return pos;
 }
 
+int min(int arr[], int n) {
+  int min = 11;
+  int pos = 0;
+
+  for (int i = 0; i < n; i++) {
+    if (arr[i] < min) {
+      min = arr[i];
+      pos = i;
+    }
+  }
+
+  return pos;
+}
 int main() {
   int *arr, key, i, p;
   arr = new int[LENGHT];
@@ -30,7 +43,11 @@ int main() {
   }
 
   p = max(arr, LENGHT);
-  cout << "Pozycja: " << p << endl;
+  cout << "Pozycja max: " << p << endl;
+
+  p = min(arr, LENGHT);
+  cout << "Pozycja min: " << p << endl;
+
   delete[] arr;
   return 0;
 }
