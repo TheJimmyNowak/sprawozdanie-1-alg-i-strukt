@@ -90,7 +90,7 @@ int main() {
   srand(time(NULL));
 
   for (i = 0; i < LENGHT; i++) {
-    arr[i] = rand() % 20 - 10;
+    arr[i] = rand() % 21 - 11;
   }
 
   p = max(arr, LENGHT);

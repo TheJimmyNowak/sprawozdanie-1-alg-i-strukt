@@ -3,12 +3,6 @@
 
 using namespace std;
 
-int WySzukaj(int T[], int n, int k) {
-  for (int i = 0; i < n; i++)
-    if (T[i] == k)
-      return i;
-  return -1;
-}
 int main() {
   int *D, lenght, k, i, p;
   cout << "Podaj rozmiar tablicy: " << endl;
