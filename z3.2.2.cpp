@@ -10,12 +10,12 @@ int WySzukaj(int T[], int n, int k) {
   return -1;
 }
 int main() {
-  int *D, n, k, i, p;
+  int *D, lenght, k, i, p;
   cout << "Podaj rozmiar tablicy: " << endl;
-  cin >> n;
-  D = new int[n];
+  cin >> lenght;
+  D = new int[lenght];
   cout << "Podaj elementy tablicy: " << endl;
-  for (i = 0; i < n; i++) {
+  for (i = 0; i < lenght; i++) {
     cin >> D[i];
   }
   cout << "Podaj klucz: ";
@@ -23,12 +23,13 @@ int main() {
 
   p = -1;
 
-  for (int i = 0; i < n; i++) {
-    if (D[i] == k) { // jeśli jest klucz w tablicy
-      p = i + 1;     // to zapamiętaj pozycję (indeks) klucza
+  for (int i = 0; i < lenght; i++) {
+    if (D[i] == k) {
+      cout << ">" << D[i] << endl;
+    } else {
+      cout << D[i] << endl;
     }
   }
-  cout << "Szukany element jest na pozycji: " << p << endl << endl;
   delete[] D;
   return 0;
 }
